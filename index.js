@@ -5,7 +5,10 @@ var cors = require('cors')
 const app = express()
 
 app.use(cors({
-  origin: "https://notebook-frontend-five.vercel.app"
+  origin: "https://notebook-frontend-five.vercel.app",
+  methods:["POST","GET"],
+     credentials: true
+
 }))
 connectTOMongo();
 
